@@ -15,8 +15,6 @@ public class CountUniqueValues {
 	/*
 	 * Example: countUniqueValues([1,1,1,1,1,2]) // 2 
 	 * Example: countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]) // 7
-	 * 
-	 * 
 	 */
 	public static void main(String[] args) {
 		int [] arrayOne = {1,1,1,1,1,2};
@@ -35,15 +33,12 @@ public class CountUniqueValues {
 		// first index
 		int i = 0;
 		
+		
 		for(int j = 1; j < array.length; j++) {
 			if(array[i] != array[j]) {
 				count++;
-			//	System.out.println("Count: " + count);
 				i++;
-			//	System.out.println("i: " + i);
 				array[i] = array[j];
-			//	System.out.println("Array[i]: " + array[i]);
-			//	System.out.println("Array[j]: " + array[j]);
 			}
 		}
 
