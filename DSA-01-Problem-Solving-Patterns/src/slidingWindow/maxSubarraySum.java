@@ -18,6 +18,11 @@ public class maxSubarraySum {
 	 */
 
 	public static void main(String[] args) {
+		
+		int[] array = {1,2,5,2,8,1,5};
+		
+		System.out.println(maxSubArraySum(array,2));
+		System.out.println(maxSubArraySum(array,4));
 
 	}
 
@@ -34,7 +39,7 @@ public class maxSubarraySum {
 
 		// add first n digits & assume it is the max
 		for (int i = 0; i < n; i++) {
-			maxSum = +array[i];
+			maxSum += array[i];
 		}
 
 		tempSum = maxSum;
