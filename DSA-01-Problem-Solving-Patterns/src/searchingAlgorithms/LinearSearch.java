@@ -3,6 +3,9 @@ package searchingAlgorithms;
 public class LinearSearch {
 	/*
 	 * Look at every element in the array and check if it's the value we want.
+	 * Best Case - O(1)
+	 * Average Case - O(n)
+	 * Worst Case - O(n)
 	 */
 	public static void main(String[] args) {
 		int[] array = {5, 8, 1, 100, 12, 3, 12};
