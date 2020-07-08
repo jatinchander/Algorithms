@@ -1,6 +1,6 @@
 package searchingAlgorithms;
 
-public class naiveSearch {
+public class NaiveSearch {
 	/*
 	 * Given two strings, check how many times the smaller string appears in the
 	 * longer string Example: naiveSearch("lorie loled", "lol") // 1
@@ -10,11 +10,11 @@ public class naiveSearch {
 		String s1 = "abbbbbabbbbabbbbbab";
 		String s2 = "ab";
 		
-		System.out.println("The number of times " + s2 + " appears in " + s1 + " is: " + NaiveSearch(s1, s2));
+		System.out.println("The number of times " + s2 + " appears in " + s1 + " is: " + naiveSearch(s1, s2));
 
 	}
 
-	public static int NaiveSearch(String s1, String s2) {
+	public static int naiveSearch(String s1, String s2) {
 		// initialize counter
 		int count = 0;
 		// loop through larger string
