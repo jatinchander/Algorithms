@@ -30,16 +30,16 @@ public class InsertionSort {
 			int currentValue = array[i];
 			// element that proceeds it
 			int j = i - 1;
-
+	
 			// first condition is so we don't swap with itself
 			// second condition is swapping when the proceeding element is greater
 			while (j >= 0 && array[j] > currentValue) {
 				array[j + 1] = array[j];
 				j--;
 			}
-
-			// j+1 because you want the next element (j is -1 in the first iteration)
+			
 			array[j + 1] = currentValue;
+			System.out.println("Array " +  i + ": " + Arrays.toString(array));
 		}
 
 		return array;
