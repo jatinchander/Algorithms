@@ -14,6 +14,10 @@ public class MergeSort {
 	 *          5. [10, 24] [76, 73] merge the right half (76, 73)
 	 *          6. [10, 24] [73, 76] sort the right half 
 	 *          7. [10, 24, 73, 76] sort both halves
+	 * Best case: O(n log n)
+	 * Average case: O(n log n)
+	 * Worst case: O(n log n)
+	 * Space: O(n)
 	 */
 		
 	public static void main(String[] args) {
