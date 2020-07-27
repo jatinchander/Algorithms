@@ -20,6 +20,10 @@ public class SLL {
 		list.insert(list, 40);
 		
 		printList(list);
+		list.insert(list, 13);
+		printList(list);
+		list.delete(list);
+		printList(list);
 	}
 	
 		
@@ -38,7 +42,9 @@ public class SLL {
 	} // end node class
 	
 	// helper print method
-	public static void printList(SLL list) { 
+	public static void printList(SLL list) {
+		System.out.println();
+		
         Node temp = list.head; 
    
         System.out.print("LinkedList: "); 
@@ -52,10 +58,10 @@ public class SLL {
             temp = temp.next; 
         } 
         
-        System.out.print("NULL");
+       System.out.print("NULL");
     } 
 	
-	// insert method
+	// insert at tail method
 	public static SLL insert(SLL list, int data) {
 		// Create a new node
 		Node newNode = new Node(data);
@@ -75,5 +81,37 @@ public class SLL {
 		}
 		
 		return list;
+	} // end insert
+	
+	// delete at tail method
+	public static SLL delete(SLL list) {
+		// empty list
+		if(list.head == null) {
+			return null;
+		}
+		
+		// keeps track of current node & will go all the way to the end
+		Node current = list.head;
+		// keeps track of node before current
+		Node newTail = current;
+		
+		// traverse to the end of the list
+		while(current.next != null) {
+			newTail = current;
+			current = current.next;
+		}
+		
+		// when there is only 1 item in list
+		if(current.data == newTail.data) {
+			list.head = null;
+		}
+		else {
+			current = null;
+			newTail.next = current;
+		}
+				
+		return list;
 	}
+	
+	
 } // end SLL class
