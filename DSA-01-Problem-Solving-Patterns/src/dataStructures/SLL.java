@@ -11,18 +11,20 @@ public class SLL {
 	
 	Node head = null;
 	
-	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		SLL list = new SLL();
-		list.insert(list, 4);
-		list.insert(list, 15);
-		list.insert(list, 7);
-		list.insert(list, 40);
-		
+		insert(list, 4);
+		insert(list, 15);
+		insert(list, 7);
+		insert(list, 40);	
 		printList(list);
-		list.insert(list, 13);
+		insert(list, 13);
 		printList(list);
-		list.delete(list);
+		delete(list);
+		printList(list);
+		deleteFromStart(list);
+		printList(list);
+		insertToStart(list, 4);
 		printList(list);
 	}
 	
@@ -111,6 +113,30 @@ public class SLL {
 		}
 				
 		return list;
+	} // end of delete
+	
+	// shift method
+	public static SLL deleteFromStart(SLL list) {
+		if(list.head == null) {
+			return null;
+		}
+		
+		Node temp = list.head.next;
+		list.head = temp;
+		
+		return list;
+	} // end of deleteFromStart
+	
+	// insert in beginning 
+	public static SLL insertToStart(SLL list, int data) {
+		Node newNode = new Node(data);
+		
+		Node temp = list.head;
+		list.head = newNode;
+		newNode.next = temp;
+		
+		return list;
+		
 	}
 	
 	
