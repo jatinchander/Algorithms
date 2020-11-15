@@ -117,13 +117,13 @@ public class SLL {
 	
 	// shift method
 	public static SLL deleteFromStart(SLL list) {
-		if(list.head == null) {
+		if (list.head == null) {
 			return null;
+		} else {
+			Node temp = list.head.next;
+			list.head = temp;
 		}
-		
-		Node temp = list.head.next;
-		list.head = temp;
-		
+
 		return list;
 	} // end of deleteFromStart
 	
@@ -137,6 +137,20 @@ public class SLL {
 		
 		return list;
 		
+	}
+	
+	// get method - given a position, return the node
+	public static Node getByIndex (SLL list, int index) {
+		if(index < 0) {
+			return null;
+		}
+		int counter = 0;
+		Node current = list.head;
+		while(counter != index) {
+			current = current.next;
+			counter++;
+		}
+		return current;
 	}
 	
 	
